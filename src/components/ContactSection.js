@@ -15,7 +15,7 @@ export default function ContactSection() {
       </div>
       <div className="flex justify-center">
         <a href="mailto:jakubxjurkiewicz@gmail.com">
-          <button class="bn632-hover bn20 font-orbitron">Say Hello</button>
+          <button className="bn632-hover bn20 font-orbitron">Say Hello</button>
         </a>
       </div>
     </section>
