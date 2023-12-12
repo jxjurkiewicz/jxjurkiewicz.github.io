@@ -12,6 +12,8 @@
     --background-start-rgb: 3, 5, 33;
     --background-end-rgb: 1, 2, 13;
 
+    --background-bright-rgb: 30, 35, 100;
+
     --color-primBlue-1050: 211deg 100% 95%;
     --color-primBlue-1000: 216deg 100% 93%;
     --color-primBlue-100: 234deg 90% 25%;
@@ -26,7 +28,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
+    rgb(var(--background-start-rgb));
   background-attachment: fixed;
 }
 
@@ -124,8 +127,9 @@ main > section {
   fill: white;
 }
 
-.bn632-hover {
-  width: 160px;
+.button-hover {
+  min-width: 160px;
+  padding: 0 20px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
@@ -139,22 +143,21 @@ main > section {
   transition: all 0.4s ease-in-out;
 }
 
-.bn632-hover:hover {
+.button-hover:hover {
   background-position: 100% 0;
   moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
-.bn632-hover:focus {
+.button-hover:focus {
   outline: none;
 }
 
-.bn632-hover.bn20 {
+.button-hover.button {
   background-image: linear-gradient(
     to right,
     hsl(var(--color-suppBlue-100) / 0.25) 0%,
     hsl(var(--color-suppBlue-100) / 0.75) 40%,
-    hsl(var(--color-suppBlue-100) / 0.25) 100%,
     hsl(var(--color-suppBlue-100) / 0.25) 100%
   );
   box-shadow: 0 4px 15px 0 var(--color-green-100);

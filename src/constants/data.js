@@ -1,4 +1,5 @@
 import * as Icons from "../components/Icons";
+import { ContactIconBig, LinkedinIconBig, GitHubSocialsIconBig } from "../components/Icons";
 
 export const techSkills = [
   {
@@ -48,5 +49,26 @@ export const techSkills = [
   {
     title: "GitHub",
     Icon: Icons.GitHubIcon,
+  },
+];
+
+export const socials = [
+  {
+    title: "Contact",
+    link: "mailto:jakubxjurkiewicz@gmail.com",
+    Icon: Icons.ContactIconSmall,
+    IconBig: ContactIconBig,
+  },
+  {
+    title: "Linkedin",
+    link: "https://www.linkedin.com/in/jakub-jurkiewicz-970723286/",
+    Icon: Icons.LinkedinIconSmall,
+    IconBig: LinkedinIconBig,
+  },
+  {
+    title: "Github",
+    link: "https://github.com/jxjurkiewicz",
+    Icon: Icons.GitHubSocialsIconSmall,
+    IconBig: GitHubSocialsIconBig,
   },
 ];

@@ -1,28 +1,26 @@
-import Header from "@/components/Header";
+import Header from "@/components/Header/Header";
 import SplashSection from "@/components/SplashSection";
 
-import IconSection from "@/components/IconSection";
-import AboutMeSection from "@/components/AboutMeSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import AboutMeSection from "@/components/AboutMeSection/AboutMeSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import SocialsWidget from "@/components/SocialsWidget";
 
 export default function Home() {
   return (
     <>
       <Header />
 
-      <main className="max-w-7xl mx-auto px-5">
+      <main className="max-w-7xl mx-auto px-5 pt-[87px] md:pt-0">
         <SplashSection />
+        <SocialsWidget />
 
         <AboutMeSection />
 
-        <IconSection />
+        <ExperienceSection />
 
         <ContactSection />
-
-        {/* <section>
-          <h2>Resume</h2>
-        </section> */}
       </main>
 
       <Footer />
