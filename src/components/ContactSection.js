@@ -2,9 +2,9 @@ import { socials } from "@/constants/data";
 
 export default function ContactSection() {
   return (
-    <section className="mx-auto mb-48 max-w-screen-lg">
+    <section id="section-contact" className="mx-auto mb-28 md:mb-48 max-w-screen-lg">
       <h2 className="section-header">Contact</h2>
-      <div className="text-lg text-center lg:w-3/4 mx-auto mb-10">
+      <div className="md:text-lg text-center lg:w-3/4 mx-auto mb-10">
         <p className="mb-5">
           I'm actively seeking new opportunities to contribute my expertise to innovative
           projects. With a strong foundation in web development and a keen eye for design,

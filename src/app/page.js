@@ -12,7 +12,7 @@ export default function Home() {
     <>
       <Header />
 
-      <main className="max-w-7xl mx-auto px-5 pt-[87px] md:pt-0">
+      <main className="max-w-7xl mx-auto px-5 pt-[88px] md:pt-0">
         <SplashSection />
         <SocialsWidget />
 

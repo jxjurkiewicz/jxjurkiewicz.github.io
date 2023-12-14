@@ -52,3 +52,22 @@
   width: 0%;
   left: 50%;
 }
+
+#menuMobile {
+  @apply fixed z-30 top-[88px] -right-52 w-0 flex justify-end;
+  height: calc(100% - 88px);
+}
+
+#menuMobile.open {
+  @apply w-full right-0;
+}
+
+#menuMobile ul:first-of-type a {
+  @apply py-4 inline-block w-full px-3 uppercase font-orbitron font-extrabold text-lg hover:bg-dark;
+  border-bottom: 3px solid var(--color-dark);
+}
+
+#menuDesktop a,
+#menuMobileContainer a {
+  @apply cursor-pointer;
+}

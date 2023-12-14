@@ -1,8 +1,15 @@
 export default function Logo() {
   return (
-    <div>
+    <a href="/">
       {/* <Image src="/img/logo.svg" alt="logo" width="0" height="0" className="w-16 h-auto" /> */}
-      <svg id="logo-37" width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        id="logo-37"
+        width="42"
+        height="38"
+        viewBox="0 0 42 38"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         {" "}
         <path
           d="M5.74661 28.7259C7.28678 29.8002 9.78389 29.8002 11.3241 28.7259C12.8642 27.6516 12.8642 25.9098 11.3241 24.8355C9.78389 23.7612 7.28678 23.7612 5.74661 24.8355C4.20644 25.9098 4.20644 27.6516 5.74661 28.7259Z"
@@ -41,6 +48,6 @@ export default function Logo() {
           fill="var(--color-green-100)"
         ></path>{" "}
       </svg>
-    </div>
+    </a>
   );
 }
