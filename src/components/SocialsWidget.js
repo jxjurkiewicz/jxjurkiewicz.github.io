@@ -2,7 +2,7 @@ import { socials } from "@/constants/data";
 
 export default function SocialsWidget() {
   return (
-    <div className="fixed bottom-0 left-12 2xl:block hidden">
+    <div className="fixed bottom-0 left-12 2xl:block hidden z-50">
       <ul className="mb-3">
         {socials.map((social, id) => (
           <a
