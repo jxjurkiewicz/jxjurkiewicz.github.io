@@ -14,11 +14,11 @@ const AboutMeSection = () => {
           data-aos="fade-right"
           className="w-full lg:w-3/5 md:text-lg text-justify md:text-left"
         >
-          I'm Jakub, <a href="">test</a> a passionate frontend developer hailing from the
-          picturesque city of Olsztyn, located on the north side of Poland.
+          I&apos;m Jakub, a passionate frontend developer hailing from the picturesque
+          city of Olsztyn, located on the north side of Poland.
           <br /> <br />
           With over two years of hands-on experience in the ever-evolving world of web
-          development, I've had the opportunity to work on diverse projects that have
+          development, I&apos;ve had the opportunity to work on diverse projects that have
           fueled my love for creating seamless and user-friendly interfaces.
           <br /> <br /> Since beginning my journey as a frontend developer, I&apos;ve done
           remote work for agencies and collaborated with talented people to create digital
