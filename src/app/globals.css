@@ -162,3 +162,8 @@ main > section {
   );
   box-shadow: 0 4px 15px 0 var(--color-green-100);
 }
+
+.page404 ul#menuDesktop,
+.page404 #hamburger {
+  display: none;
+}
