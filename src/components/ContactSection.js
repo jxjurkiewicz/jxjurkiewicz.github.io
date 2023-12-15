@@ -8,10 +8,10 @@ export default function ContactSection() {
       </h2>
       <div className="md:text-lg text-center lg:w-3/4 mx-auto mb-10">
         <p data-aos="fade-down-right" className="mb-5">
-          I'm actively seeking new opportunities to contribute my expertise to innovative
-          projects. With a strong foundation in web development and a keen eye for design,
-          I am excited about the prospect of bringing creativity and technical proficiency
-          to your team.
+          I&apos;m actively seeking new opportunities to contribute my expertise to
+          innovative projects. With a strong foundation in web development and a keen eye
+          for design, I am excited about the prospect of bringing creativity and technical
+          proficiency to your team.
         </p>
         <ul className="text-center mb-5 flex justify-center gap-5">
           {socials.map((social, id) => (

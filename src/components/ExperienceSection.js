@@ -50,16 +50,9 @@ export default function ExperienceSection() {
           <PortfolioIcon />
         </div>
         <p className="mb-10 w-3/4 md:w-1/2 mx-auto text-center text-dark leading-tight md:text-lg">
-          Thank you for considering my profile! If you're looking for more information
-          about my skills, feel free to check my CV below:
+          Thank you for considering my profile! If you&apos;re looking for more
+          information about my skills, feel free to check my CV below:
         </p>
-        {/* <div className="flex justify-center">
-          <a href="/src/constants/CV_Jakub_Jurkiewicz_ENG.pdf" target="_blank">
-            <button className="button-hover button font-orbitron">
-              Curriculum Vitae
-            </button>
-          </a>
-        </div> */}
         <CVButton />
       </div>
     </section>
