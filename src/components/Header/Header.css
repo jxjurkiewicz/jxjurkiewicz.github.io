@@ -69,5 +69,41 @@
 
 #menuDesktop a,
 #menuMobileContainer a {
-  @apply cursor-pointer;
+  @apply cursor-pointer relative;
+}
+
+#menuDesktop a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menuDesktop a:before,
+#menuDesktop a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  background: #fff;
+}
+
+#menuDesktop a:before {
+  left: 0;
+}
+#menuDesktop a:after {
+  right: 0;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+#menuDesktop a:hover:before {
+  background: #fff;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+#menuDesktop a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
 }

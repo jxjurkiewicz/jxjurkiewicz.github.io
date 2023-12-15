@@ -2,14 +2,39 @@ import { techSkills } from "@/constants/data";
 import { PortfolioIcon } from "@/components/Icons.js";
 import CVButton from "./CVButton";
 
+const onMouseEnterIcon = (e) => {
+  const hoverItem = e.target.closest("li");
+
+  hoverItem.setAttribute("data-aos", "flip-right");
+};
+
+const onMouseLeaveIcon = (e) => {
+  const hoverItem = e.target.closest("li");
+
+  setTimeout(() => {
+    hoverItem.removeAttribute("data-aos", "flip-right");
+  }, 400);
+};
+
 export default function ExperienceSection() {
   return (
     <section id="section-experience" className="mx-auto mb-28 md:mb-48 max-w-screen-lg">
-      <h2 className="section-header">Experience {/* Technologies */} </h2>
+      <h2 data-aos="flip-left" className="section-header">
+        Experience {/* Technologies */}{" "}
+      </h2>
 
-      <ul className="mb-20 md:mb-32 grid justify-items-center items-stretch justify-center grid-cols-[repeat(auto-fit,minmax(90px,90px))] gap-7 sm:grid-cols-[repeat(auto-fit,minmax(110px,110px))] sm:gap-8 md:grid-cols-[repeat(auto-fit,minmax(125px,125px))] lg:grid-cols-[repeat(auto-fit,minmax(140px,140px))]">
+      <ul
+        data-aos="fade-down"
+        className="mb-20 md:mb-32 grid justify-items-center items-stretch justify-center grid-cols-[repeat(auto-fit,minmax(90px,90px))] gap-7 sm:grid-cols-[repeat(auto-fit,minmax(110px,110px))] sm:gap-8 md:grid-cols-[repeat(auto-fit,minmax(125px,125px))] lg:grid-cols-[repeat(auto-fit,minmax(140px,140px))]"
+      >
         {techSkills.map((skill, id) => (
           <li
+            onMouseEnter={(e) => {
+              onMouseEnterIcon(e);
+            }}
+            onMouseLeave={(e) => {
+              onMouseLeaveIcon(e);
+            }}
             key={id}
             className="rounded-lg flex flex-col flex-nowrap items-center justify-center gap-5 glassy-screen w-[90px] min-h-[90px] p-4 sm:w-[110px] sm:min-h-[110px] sm:p-4 md:w-[125px] md:min-h-[125px] md:p-5 lg:w-[140px] lg:min-h-[140px] lg:p-6"
           >
@@ -20,7 +45,7 @@ export default function ExperienceSection() {
           </li>
         ))}
       </ul>
-      <div className="flex flex-col justify-center items-center">
+      <div data-aos="fade-up" className="flex flex-col justify-center items-center">
         <div className="mb-4">
           <PortfolioIcon />
         </div>

@@ -28,7 +28,7 @@ const Header = () => {
   const scrollToSection = (e) => {
     const section = document.getElementById(e);
     window.scrollTo({
-      top: section.offsetTop - 50,
+      top: section.offsetTop - 80,
       behavior: "smooth",
     });
   };
