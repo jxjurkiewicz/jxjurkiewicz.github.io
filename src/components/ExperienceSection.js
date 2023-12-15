@@ -2,20 +2,6 @@ import { techSkills } from "@/constants/data";
 import { PortfolioIcon } from "@/components/Icons.js";
 import CVButton from "./CVButton";
 
-const onMouseEnterIcon = (e) => {
-  const hoverItem = e.target.closest("li");
-
-  hoverItem.setAttribute("data-aos", "flip-right");
-};
-
-const onMouseLeaveIcon = (e) => {
-  const hoverItem = e.target.closest("li");
-
-  setTimeout(() => {
-    hoverItem.removeAttribute("data-aos", "flip-right");
-  }, 400);
-};
-
 export default function ExperienceSection() {
   return (
     <section id="section-experience" className="mx-auto mb-28 md:mb-48 max-w-screen-lg">
@@ -29,12 +15,6 @@ export default function ExperienceSection() {
       >
         {techSkills.map((skill, id) => (
           <li
-            onMouseEnter={(e) => {
-              onMouseEnterIcon(e);
-            }}
-            onMouseLeave={(e) => {
-              onMouseLeaveIcon(e);
-            }}
             key={id}
             className="rounded-lg flex flex-col flex-nowrap items-center justify-center gap-5 glassy-screen w-[90px] min-h-[90px] p-4 sm:w-[110px] sm:min-h-[110px] sm:p-4 md:w-[125px] md:min-h-[125px] md:p-5 lg:w-[140px] lg:min-h-[140px] lg:p-6"
           >
