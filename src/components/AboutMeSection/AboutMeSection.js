@@ -1,5 +1,5 @@
 import Image from "next/image";
-import myPicture from "../../../public/img/myPicture.jpg";
+import me from "../../../public/img/me.PNG";
 
 import "./AboutMeSection.css";
 
@@ -29,7 +29,7 @@ const AboutMeSection = () => {
         <div className="w-full lg:w-2/5 flex justify-center">
           <div data-aos="fade-left" className="myPicture">
             <Image
-              src={myPicture}
+              src={me}
               alt="me"
               className="max-w-[200px] xsm:max-w-[250px] md:max-w-xs h-auto relative rounded-sm"
             />
