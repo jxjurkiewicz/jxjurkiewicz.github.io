@@ -10,6 +10,7 @@ export default function SocialsWidget() {
             key={id}
             href={social.link}
             target="_blank"
+            data-aos="fade-down"
           >
             <li>
               <social.Icon />
