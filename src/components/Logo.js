@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function Logo() {
   return (
-    <a href="/">
+    <Link href="/">
       {/* <Image src="/img/logo.svg" alt="logo" width="0" height="0" className="w-16 h-auto" /> */}
       <svg
         id="logo-37"
@@ -48,6 +50,6 @@ export default function Logo() {
           fill="var(--color-green-100)"
         ></path>{" "}
       </svg>
-    </a>
+    </Link>
   );
 }
