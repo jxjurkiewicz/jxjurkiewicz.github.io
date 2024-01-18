@@ -1,4 +1,5 @@
 import { socials } from "@/constants/data";
+import Link from "next/link";
 
 export default function ContactSection() {
   return (
@@ -15,7 +16,7 @@ export default function ContactSection() {
         </p>
         <ul className="text-center mb-5 flex justify-center gap-5">
           {socials.map((social, id) => (
-            <a
+            <Link
               data-aos="zoom-in"
               className="flex justify-center items-center w-14 h-14 bg-background hover:bg-backgroundBright border hover:shadow-socials rounded-sm"
               key={id}
@@ -25,7 +26,7 @@ export default function ContactSection() {
               <li>
                 <social.IconBig />
               </li>
-            </a>
+            </Link>
           ))}
         </ul>
         <p data-aos="fade-up-left">
@@ -34,9 +35,9 @@ export default function ContactSection() {
         </p>
       </div>
       <div data-aos="fade-up" className="flex justify-center">
-        <a href="mailto:jakubxjurkiewicz@gmail.com">
+        <Link href="mailto:jakubxjurkiewicz@gmail.com">
           <button className="button-hover button font-orbitron">Say Hello</button>
-        </a>
+        </Link>
       </div>
     </section>
   );
