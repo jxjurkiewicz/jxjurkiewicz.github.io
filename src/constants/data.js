@@ -1,5 +1,9 @@
 import * as Icons from "../components/Icons";
-import { ContactIconBig, LinkedinIconBig, GitHubSocialsIconBig } from "../components/Icons";
+import {
+  ContactIconBig,
+  LinkedinIconBig,
+  GitHubSocialsIconBig,
+} from "../components/Icons";
 
 export const techSkills = [
   {
@@ -18,9 +22,13 @@ export const techSkills = [
     title: "Tailwind CSS",
     Icon: Icons.TailwindCSSIcon,
   },
+  // {
+  //   title: "JavaScript",
+  //   Icon: Icons.JavascriptIcon,
+  // },
   {
-    title: "JavaScript",
-    Icon: Icons.JavascriptIcon,
+    title: "TypeScript",
+    Icon: Icons.TypescriptIcon,
   },
   {
     title: "jQuery",
