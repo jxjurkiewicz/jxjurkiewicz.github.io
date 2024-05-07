@@ -27,7 +27,7 @@ export default function SplashSection() {
           data-aos-duration="2000"
           className="font-rubik xsm:w-4/5 lg:w-2/5 text-dark text-xs xsm:text-sm md:text-base text-center sm:text-left mx-auto sm:mx-0"
         >
-          I’m a passionate software engineer for 2 years. I design and code beautifully
+          I’m a passionate software engineer for 3 years. I design and code beautifully
           simple things, and I love what I do. Currently, I’m focused on mastering my
           React skills.
         </p>
