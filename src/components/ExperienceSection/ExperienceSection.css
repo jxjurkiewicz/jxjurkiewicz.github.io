@@ -1,0 +1,23 @@
+.card-container:hover .link-layer {
+  @apply bg-opacity-80;
+}
+
+.card-container:hover .link-layer * {
+  @apply opacity-100;
+}
+
+.link-layer {
+  @apply h-full bg-black absolute top-0 z-10 w-full bg-opacity-0;
+}
+
+.link-layer * {
+  @apply opacity-0;
+}
+
+.control-dots {
+  bottom: -50px !important;
+}
+
+.carousel.carousel-slider {
+  @apply !overflow-visible;
+}

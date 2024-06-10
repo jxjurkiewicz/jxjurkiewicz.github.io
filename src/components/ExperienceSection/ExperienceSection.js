@@ -1,17 +1,20 @@
 import { techSkills } from "@/constants/data";
 import { PortfolioIcon } from "@/components/Icons.js";
-import CVButton from "./CVButton";
+import CVButton from "../CVButton";
+import Projects from "./Projects";
+import "./ExperienceSection.css";
+import ProjectsMobile from "./ProjectsMobile";
 
 export default function ExperienceSection() {
   return (
-    <section id="section-experience" className="mx-auto mb-28 md:mb-48 max-w-screen-lg">
+    <section id="section-experience" className="mx-auto mb-28 md:mb-48">
       <h2 data-aos="flip-left" className="section-header">
-        Experience {/* Technologies */}{" "}
+        Technologies
       </h2>
 
       <ul
         data-aos="fade-down"
-        className="mb-20 md:mb-32 grid justify-items-center items-stretch justify-center grid-cols-[repeat(auto-fit,minmax(90px,90px))] gap-7 sm:grid-cols-[repeat(auto-fit,minmax(110px,110px))] sm:gap-8 md:grid-cols-[repeat(auto-fit,minmax(125px,125px))] lg:grid-cols-[repeat(auto-fit,minmax(140px,140px))]"
+        className="max-w-screen-lg mx-auto mb-20 md:mb-32 grid justify-items-center justify-center grid-cols-[repeat(auto-fit,minmax(90px,90px))] gap-7 sm:grid-cols-[repeat(auto-fit,minmax(110px,110px))] sm:gap-8 md:grid-cols-[repeat(auto-fit,minmax(125px,125px))] lg:grid-cols-[repeat(auto-fit,minmax(140px,140px))]"
       >
         {techSkills.map((skill, id) => (
           <li
@@ -25,6 +28,15 @@ export default function ExperienceSection() {
           </li>
         ))}
       </ul>
+
+      <h2 data-aos="flip-left" className="section-header">
+        Projects
+      </h2>
+
+      <Projects />
+
+      <ProjectsMobile />
+
       <div data-aos="fade-up" className="flex flex-col justify-center items-center">
         <div className="mb-4">
           <PortfolioIcon />

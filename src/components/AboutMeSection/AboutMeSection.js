@@ -17,7 +17,7 @@ const AboutMeSection = () => {
           I&apos;m Jakub, a passionate frontend developer hailing from the picturesque
           city of Olsztyn, located on the north side of Poland.
           <br /> <br />
-          With over two years of hands-on experience in the ever-evolving world of web
+          With over 3 years of hands-on experience in the ever-evolving world of web
           development, I&apos;ve had the opportunity to work on diverse projects that have
           fueled my love for creating seamless and user-friendly interfaces.
           <br /> <br /> Since beginning my journey as a frontend developer, I&apos;ve done
@@ -31,7 +31,7 @@ const AboutMeSection = () => {
             <Image
               src={me}
               alt="me"
-              className="max-w-[200px] xsm:max-w-[250px] md:max-w-xs h-auto relative rounded-sm"
+              className="max-w-[200px] xs:max-w-[250px] md:max-w-xs h-auto relative rounded-sm"
             />
           </div>
         </div>

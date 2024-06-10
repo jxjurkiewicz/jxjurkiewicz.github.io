@@ -76,6 +76,17 @@ main > section {
   @apply hover:text-white;
 }
 
+.glassy-screen-dark {
+  background: linear-gradient(
+    107deg,
+    hsl(var(--color-suppBlue-100) / 0.5) 0%,
+    hsl(var(--color-suppBlue-100) / 0.95) 40%,
+    hsl(var(--color-suppBlue-100) / 0.5) 100%
+  );
+  color: var(--color-green-100);
+  @apply hover:text-white;
+}
+
 /* Styles for writing header in SplashSection */
 @media (min-width: 640px) {
   .typewriter {

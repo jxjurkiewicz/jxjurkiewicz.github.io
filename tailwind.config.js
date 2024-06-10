@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        xsm: "480px",
+        xs: "480px",
+        s: "560px",
       },
       fontFamily: {
         orbitron: "Orbitron",

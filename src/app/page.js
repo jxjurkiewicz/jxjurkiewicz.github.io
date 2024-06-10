@@ -7,7 +7,7 @@ import { useEffect } from "react";
 
 import Header from "@/components/Header/Header";
 import SplashSection from "@/components/SplashSection";
-import ExperienceSection from "@/components/ExperienceSection";
+import ExperienceSection from "@/components/ExperienceSection/ExperienceSection";
 import AboutMeSection from "@/components/AboutMeSection/AboutMeSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
