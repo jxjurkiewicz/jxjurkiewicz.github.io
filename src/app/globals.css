@@ -178,3 +178,7 @@ main > section {
 .page404 #hamburger {
   display: none;
 }
+
+.previous-page-button > svg:hover {
+  fill: var(--color-dark);
+}

@@ -1,16 +1,19 @@
+"use client";
+
+import { OpenLinkIcon } from "@/components/Icons";
+import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/constants/projects";
-import { OpenLinkIcon } from "../Icons";
-import Link from "next/link";
+import PreviousPageButton from "@/components/PreviousPageButton";
 
-const Projects = () => {
+const ProjectsPage = () => {
   return (
     <>
       <ul
         data-aos="fade-in"
-        className="hidden md:flex flex-wrap -mx-3 mb-10 md:justify-start justify-center"
+        className="hidden md:flex flex-wrap -mx-3 mb-20 md:justify-start justify-center mt-20"
       >
-        {projects.slice(0, 6).map((project, index) => (
+        {projects.map((project, index) => (
           <li
             className="px-3 xl:w-1/3 md:w-1/2 s:w-2/3 mb-6 hover:bg-opacity-40"
             key={index}
@@ -56,13 +59,9 @@ const Projects = () => {
         ))}
       </ul>
 
-      <div className="hidden lg:flex justify-center mb-40">
-        <Link href="/projects">
-          <button className="button-hover button font-orbitron">View more</button>
-        </Link>
-      </div>
+      <PreviousPageButton />
     </>
   );
 };
 
-export default Projects;
+export default ProjectsPage;

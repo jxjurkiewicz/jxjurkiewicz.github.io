@@ -21,3 +21,42 @@
 .carousel.carousel-slider {
   @apply !overflow-visible;
 }
+
+.resume {
+  position: relative;
+  z-index: 1;
+}
+
+.resume::before {
+  @apply hidden md:block;
+  content: "";
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border: 1px solid var(--color-green-100);
+  left: 50%;
+  top: -30px;
+  border-radius: 0.125rem;
+  transform: translate(-50%, 0) rotate(45deg);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.resume::after {
+  @apply hidden md:block;
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border: 2px solid var(--color-green-100);
+  left: 50%;
+  top: -55px;
+  border-radius: 0.125rem;
+  transform: translate(-50%, 0) rotate(45deg);
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.line {
+  @apply hidden xl:block absolute w-60 h-[2px] bg-green-100 opacity-60 top-[61%];
+}

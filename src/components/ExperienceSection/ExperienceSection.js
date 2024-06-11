@@ -1,5 +1,5 @@
 import { techSkills } from "@/constants/data";
-import { PortfolioIcon } from "@/components/Icons.js";
+import { CVIcon } from "@/components/Icons.js";
 import CVButton from "../CVButton";
 import Projects from "./Projects";
 import "./ExperienceSection.css";
@@ -7,7 +7,7 @@ import ProjectsMobile from "./ProjectsMobile";
 
 export default function ExperienceSection() {
   return (
-    <section id="section-experience" className="mx-auto mb-28 md:mb-48">
+    <section id="section-experience" className="mx-auto mb-16 md:mb-48">
       <h2 data-aos="flip-left" className="section-header">
         Technologies
       </h2>
@@ -37,15 +37,23 @@ export default function ExperienceSection() {
 
       <ProjectsMobile />
 
-      <div data-aos="fade-up" className="flex flex-col justify-center items-center">
-        <div className="mb-4">
-          <PortfolioIcon />
+      <div className="pt-14 md:pt-24 md:pb-24">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col justify-center items-center resume"
+        >
+          <div className="line left-0"></div>
+          <div className="line right-0"></div>
+
+          <div className="mb-4">
+            <CVIcon />
+          </div>
+          <p className="mb-10 w-3/4 md:w-1/2 mx-auto text-center text-dark leading-tight md:text-lg">
+            Thank you for considering my profile! If you&apos;re looking for more
+            information about my skills, feel free to check my CV below:
+          </p>
+          <CVButton />
         </div>
-        <p className="mb-10 w-3/4 md:w-1/2 mx-auto text-center text-dark leading-tight md:text-lg">
-          Thank you for considering my profile! If you&apos;re looking for more
-          information about my skills, feel free to check my CV below:
-        </p>
-        <CVButton />
       </div>
     </section>
   );

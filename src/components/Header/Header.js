@@ -1,16 +1,20 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AscendingSquares from "../AscendingSquares/AscendingSquares";
 import Logo from "../Logo";
 import { socials } from "@/constants/data";
-
 import "./Header.css";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const [burgerClass, setBurgerClass] = useState("");
   const [menuClass, setMenuClass] = useState("");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const router = useRouter();
+  const isHomePage = "/";
+  const pathname = usePathname();
 
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -25,21 +29,48 @@ const Header = () => {
     setIsMenuClicked(!isMenuClicked);
   };
 
-  const scrollToSection = (e) => {
-    const section = document.getElementById(e);
-    window.scrollTo({
-      top: section.offsetTop - 80,
-      behavior: "smooth",
-    });
+  const handleNavigation = (sectionId) => {
+    if (pathname !== isHomePage) {
+      router.push("/");
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 500);
+    } else {
+      scrollToSection(sectionId);
+    }
   };
 
-  const mobileScrollToSection = (e) => {
+  const handleMobileNavigation = (sectionId) => {
     if (isMenuClicked) {
-      const section = document.getElementById(e);
       setBurgerClass("");
       setMenuClass("");
       document.body.classList.remove("overflow-hidden");
       setIsMenuClicked(!isMenuClicked);
+    }
+
+    if (pathname !== isHomePage) {
+      router.push("/");
+      setTimeout(() => {
+        mobileScrollToSection(sectionId);
+      }, 500);
+    } else {
+      mobileScrollToSection(sectionId);
+    }
+  };
+
+  const scrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      window.scrollTo({
+        top: section.offsetTop - 80,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const mobileScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
       window.scrollTo({
         top: section.offsetTop - 100,
         behavior: "smooth",
@@ -56,16 +87,16 @@ const Header = () => {
 
           <ul id="menuDesktop" className="flex text-lg font-orbitron">
             <li className="px-2">
-              <a onClick={() => scrollToSection("section-splash")}>Home</a>
+              <Link href="/">Home</Link>
             </li>
-            <li onClick={() => scrollToSection("section-aboutMe")} className="px-2">
+            <li onClick={() => handleNavigation("section-aboutMe")} className="px-2">
               <a>About Me</a>
             </li>
-            <li onClick={() => scrollToSection("section-experience")} className="px-2">
+            <li onClick={() => handleNavigation("section-experience")} className="px-2">
               <a>Experience</a>
             </li>
-            <li onClick={() => scrollToSection("section-contact")} className="px-2">
-              <a>Contact</a>
+            <li className="px-2">
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
@@ -88,18 +119,18 @@ const Header = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <ul className="text-background">
-            <a onClick={() => mobileScrollToSection("section-splash")}>
+            <Link href="/" onClick={updateMenu}>
               <li>Home</li>
-            </a>
-            <a onClick={() => mobileScrollToSection("section-aboutMe")}>
+            </Link>
+            <a onClick={() => handleMobileNavigation("section-aboutMe")}>
               <li>About Me</li>
             </a>
-            <a onClick={() => mobileScrollToSection("section-experience")}>
+            <a onClick={() => handleMobileNavigation("section-experience")}>
               <li>Experience</li>
             </a>
-            <a onClick={() => mobileScrollToSection("section-contact")}>
+            <Link href="/contact" onClick={updateMenu}>
               <li>Contact</li>
-            </a>
+            </Link>
           </ul>
 
           <ul id="socials" className="text-center mb-5 flex justify-center gap-5">

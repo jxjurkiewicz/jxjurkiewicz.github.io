@@ -1,6 +1,5 @@
 import Image from "next/image";
 import { projects } from "@/constants/projects";
-import { OpenLinkIcon } from "../Icons";
 import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -8,7 +7,7 @@ import "./ExperienceSection.css";
 
 const ProjectsMobile = () => {
   return (
-    <ul className="md:hidden mb-28">
+    <ul className="md:hidden mb-12">
       <Carousel showArrows={false} showThumbs={false} showStatus={false}>
         {projects.map((project, index) => (
           <div className="xs:w-3/4 mb-6 hover:bg-opacity-40 mx-auto" key={index}>
@@ -17,10 +16,6 @@ const ProjectsMobile = () => {
               target="_blank"
               className="bg-white w-full rounded-md flex flex-col h-full relative card-container"
             >
-              <div className="link-layer flex items-center justify-center">
-                <OpenLinkIcon />
-              </div>
-
               <div className="relative w-full h-[200px]">
                 <Image src={project.image} className="rounded-t-md" fill alt="image" />
               </div>
