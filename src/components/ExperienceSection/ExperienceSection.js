@@ -48,7 +48,7 @@ export default function ExperienceSection() {
           <div className="mb-4">
             <CVIcon />
           </div>
-          <p className="mb-10 w-3/4 md:w-1/2 mx-auto text-center text-dark leading-tight md:text-lg">
+          <p className="mb-10 w-3/4 md:w-[45%] mx-auto text-center text-dark leading-tight md:text-lg">
             Thank you for considering my profile! If you&apos;re looking for more
             information about my skills, feel free to check my CV below:
           </p>
