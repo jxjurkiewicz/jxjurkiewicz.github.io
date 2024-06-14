@@ -1,16 +1,19 @@
 import Image from "next/image";
-import { projects } from "@/constants/projects";
 import Link from "next/link";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./ExperienceSection.css";
+import { useTranslation } from "@/app/i18n/client";
 
-const ProjectsMobile = () => {
+const ProjectsMobile = ({ lng }) => {
+  const { t } = useTranslation(lng, "projects");
+  const projects = t("projects", { returnObjects: true });
+
   return (
     <ul className="md:hidden mb-12">
       <Carousel showArrows={false} showThumbs={false} showStatus={false}>
         {projects.map((project, index) => (
-          <div className="xs:w-3/4 mb-6 hover:bg-opacity-40 mx-auto" key={index}>
+          <div className="xs:w-3/4 mb-6 hover:bg-opacity-40 mx-auto h-full" key={index}>
             <Link
               href={project.link}
               target="_blank"
@@ -21,7 +24,7 @@ const ProjectsMobile = () => {
               </div>
               <div className="p-5 flex flex-col flex-grow justify-between">
                 <div>
-                  <div className="font-orbitron text-xl text-backgroundBright mb-5 text-left">
+                  <div className="font-audiowide text-xl text-backgroundBright mb-5 text-left">
                     {project.name}
                   </div>
                   <div className="text-dark mb-5 text-left">{project.description}</div>

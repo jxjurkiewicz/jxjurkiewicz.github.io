@@ -4,12 +4,15 @@ import CVButton from "../CVButton";
 import Projects from "./Projects";
 import "./ExperienceSection.css";
 import ProjectsMobile from "./ProjectsMobile";
+import { useTranslation } from "@/app/i18n/client";
 
-export default function ExperienceSection() {
+export default function ExperienceSection({ lng }) {
+  const { t } = useTranslation(lng, "experience-section");
+
   return (
     <section id="section-experience" className="mx-auto mb-16 md:mb-48">
       <h2 data-aos="flip-left" className="section-header">
-        Technologies
+        {t("section-header-technologies")}
       </h2>
 
       <ul
@@ -30,14 +33,14 @@ export default function ExperienceSection() {
       </ul>
 
       <h2 data-aos="flip-left" className="section-header">
-        Projects
+        {t("section-header-projects")}
       </h2>
 
-      <Projects />
+      <Projects lng={lng} />
 
-      <ProjectsMobile />
+      <ProjectsMobile lng={lng} />
 
-      <div className="pt-14 md:pt-24 md:pb-24">
+      <div className="pt-20 md:pt-24 md:pb-24">
         <div
           data-aos="fade-up"
           className="flex flex-col justify-center items-center resume"
@@ -49,8 +52,7 @@ export default function ExperienceSection() {
             <CVIcon />
           </div>
           <p className="mb-10 w-3/4 md:w-[45%] mx-auto text-center text-dark leading-tight md:text-lg">
-            Thank you for considering my profile! If you&apos;re looking for more
-            information about my skills, feel free to check my CV below:
+            {t("cv-description")}
           </p>
           <CVButton />
         </div>

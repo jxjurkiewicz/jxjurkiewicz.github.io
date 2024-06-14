@@ -14,6 +14,8 @@ module.exports = {
       fontFamily: {
         orbitron: "Orbitron",
         rubik: "Rubik",
+        exo: ["'Exo 2'", "sans-serif"],
+        audiowide: "Audiowide",
       },
       colors: {
         green: {

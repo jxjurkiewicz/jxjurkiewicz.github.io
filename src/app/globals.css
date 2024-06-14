@@ -1,4 +1,6 @@
-@import "../fonts/fonts.css";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 
 @tailwind base;
 @layer base {
@@ -50,7 +52,7 @@ main > section {
 }
 
 .section-header {
-  @apply font-orbitron font-extrabold text-3xl md:text-4xl lg:text-5xl text-center mb-14 relative;
+  @apply font-audiowide font-extrabold text-3xl md:text-4xl lg:text-5xl text-center mb-14 relative;
 }
 
 .section-header:after {

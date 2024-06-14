@@ -7,14 +7,19 @@ import { socials } from "@/constants/data";
 import "./Header.css";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { Footer } from "@/app/[lng]/components/Footer/client";
+import { useTranslation } from "@/app/i18n/client";
 
-const Header = () => {
+const Header = ({ lng }) => {
   const [burgerClass, setBurgerClass] = useState("");
   const [menuClass, setMenuClass] = useState("");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const router = useRouter();
   const isHomePage = "/";
   const pathname = usePathname();
+  const { t } = useTranslation(lng, "header");
 
   const updateMenu = () => {
     if (!isMenuClicked) {
@@ -30,8 +35,8 @@ const Header = () => {
   };
 
   const handleNavigation = (sectionId) => {
-    if (pathname !== isHomePage) {
-      router.push("/");
+    if (pathname !== `${isHomePage}${lng}`) {
+      router.push(`/${lng}`);
       setTimeout(() => {
         scrollToSection(sectionId);
       }, 500);
@@ -48,13 +53,13 @@ const Header = () => {
       setIsMenuClicked(!isMenuClicked);
     }
 
-    if (pathname !== isHomePage) {
-      router.push("/");
+    if (pathname !== `${isHomePage}${lng}`) {
+      router.push(`/${lng}`);
       setTimeout(() => {
-        mobileScrollToSection(sectionId);
+        scrollToSection(sectionId);
       }, 500);
     } else {
-      mobileScrollToSection(sectionId);
+      scrollToSection(sectionId);
     }
   };
 
@@ -62,48 +67,75 @@ const Header = () => {
     const section = document.getElementById(sectionId);
     if (section) {
       window.scrollTo({
-        top: section.offsetTop - 80,
+        top: section.offsetTop - 120,
         behavior: "smooth",
       });
     }
   };
 
-  const mobileScrollToSection = (sectionId) => {
-    const section = document.getElementById(sectionId);
-    if (section) {
-      window.scrollTo({
-        top: section.offsetTop - 100,
-        behavior: "smooth",
-      });
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       <AscendingSquares />
-      <header className="mx-auto w-full pb-4 pt-8 px-4 header-desktop hidden md:block">
+      <div className="h-[99px] hidden lg:block"></div>
+      {/* Placeholder div to match fixed header height */}
+      <header
+        className={`!font-exo mx-auto w-full py-7 px-4 header-desktop hidden md:block fixed top-0 z-40 ${
+          isScrolled ? "bg-backgroundBright border-b border-green-100" : ""
+        }`}
+      >
         <nav className="max-w-7xl mx-auto flex items-center justify-between">
-          <Logo />
+          <Link href={`/${lng}`}>
+            <div className="w-12 h-auto logo-container">
+              <Logo />
+            </div>
+          </Link>
 
-          <ul id="menuDesktop" className="flex text-lg font-orbitron">
-            <li className="px-2">
-              <Link href="/">Home</Link>
-            </li>
-            <li onClick={() => handleNavigation("section-aboutMe")} className="px-2">
-              <a>About Me</a>
-            </li>
-            <li onClick={() => handleNavigation("section-experience")} className="px-2">
-              <a>Experience</a>
-            </li>
-            <li className="px-2">
-              <Link href="/contact">Contact</Link>
-            </li>
-          </ul>
+          <div className="flex items-center">
+            <ul id="menuDesktop" className="flex text-xl font-bold">
+              <li className="px-2">
+                <Link href={`/${lng}`}> {t("home")} </Link>
+              </li>
+              <li onClick={() => handleNavigation("section-aboutMe")} className="px-2">
+                <a> {t("aboutme")} </a>
+              </li>
+              <li onClick={() => handleNavigation("section-experience")} className="px-2">
+                <a> {t("experience")} </a>
+              </li>
+              <li className="px-2">
+                <Link href={`/${lng}/contact`}> {t("contact")} </Link>
+              </li>
+            </ul>
+            <div className="text-[22px] ml-10 flex items-center">
+              <div className="w-5 h-[1px] bg-green-100"></div>
+              <div className="px-2">
+                <Footer lng={lng} />
+              </div>
+              <div className="w-5 h-[1px] bg-green-100"></div>
+            </div>
+          </div>
         </nav>
       </header>
       <header className="header-mobile mx-auto w-full px-4 block md:hidden py-6 bg-background border-b-2 border-green-100 fixed top-0 z-40">
         <nav className="flex items-center justify-between">
-          <Logo />
+          <Link href={`/${lng}`}>
+            <Logo />
+          </Link>
           <div id="hamburger" className={burgerClass} onClick={updateMenu}>
             <span></span>
             <span></span>
@@ -119,17 +151,17 @@ const Header = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <ul className="text-background">
-            <Link href="/" onClick={updateMenu}>
-              <li>Home</li>
+            <Link href={`/${lng}`} onClick={updateMenu}>
+              <li> {t("home")} </li>
             </Link>
             <a onClick={() => handleMobileNavigation("section-aboutMe")}>
-              <li>About Me</li>
+              <li> {t("aboutme")} </li>
             </a>
             <a onClick={() => handleMobileNavigation("section-experience")}>
-              <li>Experience</li>
+              <li> {t("experience")} </li>
             </a>
             <Link href="/contact" onClick={updateMenu}>
-              <li>Contact</li>
+              <li> {t("contact")} </li>
             </Link>
           </ul>
 

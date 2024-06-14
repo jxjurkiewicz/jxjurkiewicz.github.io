@@ -1,9 +1,12 @@
-import Image from "next/image";
-import { projects } from "@/constants/projects";
 import { OpenLinkIcon } from "../Icons";
 import Link from "next/link";
+import Image from "next/image";
+import { useTranslation } from "@/app/i18n/client";
 
-const Projects = () => {
+const Projects = ({ lng }) => {
+  const { t } = useTranslation(lng, "projects");
+  const projects = t("projects", { returnObjects: true });
+
   return (
     <>
       <ul
@@ -35,7 +38,7 @@ const Projects = () => {
               </div>
               <div className="p-5 flex flex-col flex-grow justify-between">
                 <div>
-                  <div className="font-orbitron text-xl text-backgroundBright mb-5">
+                  <div className="font-audiowide text-xl text-backgroundBright mb-5">
                     {project.name}
                   </div>
                   <div className="text-dark mb-5">{project.description}</div>
@@ -57,8 +60,8 @@ const Projects = () => {
       </ul>
 
       <div className="hidden lg:flex justify-center mb-40">
-        <Link href="/projects">
-          <button className="button-hover button font-orbitron">View more</button>
+        <Link href={`/${lng}/projects`}>
+          <button className="button-hover button font-audiowide">{t("btn")}</button>
         </Link>
       </div>
     </>

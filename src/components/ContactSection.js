@@ -1,7 +1,10 @@
+import { useTranslation } from "@/app/i18n/client";
 import { socials } from "@/constants/data";
 import Link from "next/link";
 
 export default function ContactSection() {
+  // const { t } = useTranslation(lng, "contact-section");
+
   return (
     <section
       id="section-contact"
@@ -38,7 +41,7 @@ export default function ContactSection() {
       </div>
       <div className="flex justify-center">
         <Link href="mailto:jakubxjurkiewicz@gmail.com">
-          <button className="button-hover button font-orbitron">Say Hello</button>
+          <button className="button-hover button font-audiowide">Say Hello</button>
         </Link>
       </div>
     </section>

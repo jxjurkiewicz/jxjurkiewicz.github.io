@@ -2,29 +2,26 @@ import Image from "next/image";
 import me from "../../../public/img/me.PNG";
 
 import "./AboutMeSection.css";
+import { useTranslation } from "@/app/i18n/client";
 
-const AboutMeSection = () => {
+const AboutMeSection = ({ lng }) => {
+  const { t } = useTranslation(lng, "aboutme-section");
+
   return (
     <section id="section-aboutMe" className="max-w-5xl mx-auto mb-48">
       <h2 data-aos="flip-left" className="section-header">
-        About me
+        {t("section-header")}
       </h2>
       <div className="flex flex-wrap md:flex-nowrap gap-5 justify-between items-center">
         <div
           data-aos="fade-right"
           className="w-full lg:w-3/5 md:text-lg text-justify md:text-left"
         >
-          I&apos;m Jakub, a passionate frontend developer hailing from the picturesque
-          city of Olsztyn, located on the north side of Poland.
+          {t("description1")}
           <br /> <br />
-          With over 3 years of hands-on experience in the ever-evolving world of web
-          development, I&apos;ve had the opportunity to work on diverse projects that have
-          fueled my love for creating seamless and user-friendly interfaces.
-          <br /> <br /> Since beginning my journey as a frontend developer, I&apos;ve done
-          remote work for agencies and collaborated with talented people to create digital
-          products for both business and consumer use. I&apos;m quietly confident,
-          naturally curious, and perpetually working on improving my chops one design
-          problem at a time.
+          {t("description2")}
+          <br /> <br />
+          {t("description3")}
         </div>
         <div className="w-full lg:w-2/5 flex justify-center">
           <div data-aos="fade-left" className="myPicture">
