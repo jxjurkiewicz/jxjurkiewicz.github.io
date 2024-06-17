@@ -5,7 +5,7 @@ import { dir } from "i18next";
 import { languages } from "../i18n/settings";
 
 export const metadata = {
-  metadataBase: new URL("https://jxjurkiewicz.github.io"),
+  metadataBase: new URL("https://jakubjurkiewicz.xaa.pl/"),
   title: "Jakub Jurkiewicz - Portfolio",
   description: "Portfolio written in React.js",
   // openGraph: {

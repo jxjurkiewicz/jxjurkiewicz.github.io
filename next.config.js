@@ -2,7 +2,7 @@
 const nextConfig = {
   // output: "export",
   env: {
-    metadataBase: "https://jxjurkiewicz.github.io",
+    metadataBase: "https://jakubjurkiewicz.xaa.pl/",
   },
 };
 
