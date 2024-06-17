@@ -16,7 +16,7 @@ export default function SplashSection({ lng }) {
           data-aos-duration="2000"
           className="text-green-100 mb-2 md:text-base text-sm text-center sm:text-left"
         >
-          {t("howdy")}
+          {/* {t("howdy")} */} siema test
         </div>
         <h1
           data-aos="fade-in"
