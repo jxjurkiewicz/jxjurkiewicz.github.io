@@ -13,7 +13,7 @@ const ProjectsMobile = ({ lng }) => {
     <ul className="md:hidden mb-12">
       <Carousel showArrows={false} showThumbs={false} showStatus={false}>
         {projects.map((project, index) => (
-          <div className="xs:w-3/4 mb-6 hover:bg-opacity-40 mx-auto h-full" key={index}>
+          <div className="xs:w-3/4 mb-6 hover:bg-opacity-40 mx-auto h-4/5" key={index}>
             <Link
               href={project.link}
               target="_blank"

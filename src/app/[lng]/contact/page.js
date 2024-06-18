@@ -15,6 +15,7 @@ const ContactPage = ({ params: { lng } }) => {
       <h2 data-aos="flip-left" className="section-header">
         {t("header")}
       </h2>
+
       <div className="md:text-lg text-center lg:w-3/4 mx-auto mb-10" data-aos="fade-in">
         <p className="mb-5">{t("description1")}</p>
         <ul className="text-center mb-5 flex justify-center gap-5">

@@ -131,7 +131,11 @@ const Header = ({ lng }) => {
           </div>
         </nav>
       </header>
-      <header className="header-mobile mx-auto w-full px-4 block md:hidden py-6 bg-background border-b-2 border-green-100 fixed top-0 z-40">
+      <header
+        className={`header-mobile mx-auto w-full px-4 block md:hidden py-6 border-b-2 border-green-100 fixed top-0 z-40 ${
+          isScrolled ? "bg-backgroundBright" : "bg-background"
+        }`}
+      >
         <nav className="flex items-center justify-between">
           <Link href={`/${lng}`}>
             <Logo />

@@ -3,6 +3,7 @@ import "../globals.css";
 import Footer from "@/components/Footer";
 import { dir } from "i18next";
 import { languages } from "../i18n/settings";
+import Loading from "./loading";
 
 export const metadata = {
   metadataBase: new URL("https://jakubjurkiewicz.xaa.pl/"),
@@ -23,7 +24,10 @@ export default function RootLayout({ children, params: { lng } }) {
       <body className="font-rubik">
         <Header lng={lng} />
 
-        <main className="max-w-7xl te mx-auto px-5 pt-[88px] md:pt-0 overflow-hidden">
+        <main
+          fallback={<Loading />}
+          className="max-w-7xl te mx-auto px-5 pt-[88px] md:pt-0 overflow-hidden"
+        >
           {children}
         </main>
 
