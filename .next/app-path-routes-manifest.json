@@ -1,1 +1,1 @@
-{"/_not-found/page":"/_not-found","/favicon.ico/route":"/favicon.ico","/[lng]/contact/page":"/[lng]/contact","/[lng]/page":"/[lng]","/[lng]/projects/page":"/[lng]/projects"}
+{"/_not-found/page":"/_not-found","/favicon.ico/route":"/favicon.ico","/[lng]/[...notFound]/page":"/[lng]/[...notFound]","/[lng]/contact/page":"/[lng]/contact","/[lng]/opengraph-image.png/route":"/[lng]/opengraph-image.png","/[lng]/page":"/[lng]","/[lng]/projects/page":"/[lng]/projects"}

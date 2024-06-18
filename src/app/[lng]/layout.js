@@ -8,9 +8,9 @@ export const metadata = {
   metadataBase: new URL("https://jakubjurkiewicz.xaa.pl/"),
   title: "Jakub Jurkiewicz - Portfolio",
   description: "Portfolio written in React.js",
-  // openGraph: {
-  //   images: "./opengraph-image.png",
-  // },
+  openGraph: {
+    images: "./opengraph-image.png",
+  },
 };
 
 export async function generateStaticParams() {

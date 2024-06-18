@@ -25,9 +25,9 @@ export default function SplashSection({ lng }) {
         >
           Jakub Jurkiewicz.
         </h1>
-        <h2 className="font-audiowide text-xl xs:text-3xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 md:mb-5 font-extrabold tracking-wider text-dark typewriter sm:max-w-max md:!leading-tight text-center sm:text-left">
+        <div className="font-audiowide text-xl xs:text-3xl md:text-5xl lg:text-6xl xl:text-7xl mb-3 md:mb-5 font-extrabold tracking-wider text-dark typewriter sm:max-w-max md:!leading-tight text-center sm:text-left">
           {t("title")}
-        </h2>
+        </div>
         <p
           data-aos="fade-up"
           data-aos-duration="2000"
