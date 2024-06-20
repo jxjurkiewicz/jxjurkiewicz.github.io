@@ -6,7 +6,7 @@ import { languages } from "../i18n/settings";
 import Loading from "./loading";
 
 export const metadata = {
-  metadataBase: new URL("https://jakubjurkiewicz.pl/"),
+  metadataBase: new URL("https://jakubjurkiewicz.xaa.pl/"),
   title: "Jakub Jurkiewicz - Portfolio",
   description: "Portfolio written in Next.js",
   openGraph: {
