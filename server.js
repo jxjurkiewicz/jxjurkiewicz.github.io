@@ -1,4 +1,4 @@
-const { createServer } = require("https");
+const { createServer } = require("http");
 const { parse } = require("url");
 const next = require("next");
 
@@ -35,6 +35,6 @@ app.prepare().then(() => {
       process.exit(1);
     })
     .listen(port, () => {
-      console.log(`> Ready on https://${hostname}:${port}`);
+      console.log(`> Ready on http://${hostname}:${port}`);
     });
 });
