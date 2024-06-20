@@ -5,5 +5,6 @@
   "/[lng]/contact/page": "app/[lng]/contact/page.js",
   "/[lng]/opengraph-image.png/route": "app/[lng]/opengraph-image.png/route.js",
   "/[lng]/page": "app/[lng]/page.js",
-  "/[lng]/projects/page": "app/[lng]/projects/page.js"
+  "/[lng]/projects/page": "app/[lng]/projects/page.js",
+  "/[lng]/services/page": "app/[lng]/services/page.js"
 }

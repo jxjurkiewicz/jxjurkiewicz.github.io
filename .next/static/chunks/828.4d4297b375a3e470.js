@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[828],{7828:function(e){e.exports=JSON.parse('{"home":"Strona Gł\xf3wna","aboutme":"O mnie","experience":"Doświadczenie","contact":"Kontakt","services":"Oferta"}')}}]);

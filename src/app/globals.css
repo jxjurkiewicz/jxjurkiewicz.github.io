@@ -186,29 +186,50 @@ main > section {
 }
 
 .loader {
-  border: 12px solid var(--color-light);
-  border-radius: 50%;
-  border-top: 12px solid var(--color-dark);
-  width: 80px;
-  height: 80px;
-  -webkit-animation: spin 1s linear infinite;
-  animation: spin 1s linear infinite;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  background-image: linear-gradient(#fff 16px, transparent 0),
+    linear-gradient(var(--color-green-100) 16px, transparent 0),
+    linear-gradient(var(--color-green-100) 16px, transparent 0),
+    linear-gradient(var(--color-light) 16px, transparent 0);
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left top, left bottom, right top, right bottom;
+  -webkit-animation: rotate 1s linear infinite;
+  animation: rotate 1s linear infinite;
 }
-
-@-webkit-keyframes spin {
+@-webkit-keyframes rotate {
   0% {
-    -webkit-transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
-@keyframes spin {
-  0% {
+    width: 64px;
+    height: 64px;
     transform: rotate(0deg);
   }
+  50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+  }
   100% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(0deg);
+  }
+  50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg);
+  }
+  100% {
+    width: 64px;
+    height: 64px;
     transform: rotate(360deg);
   }
 }

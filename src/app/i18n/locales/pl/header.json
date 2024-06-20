@@ -1,7 +1,7 @@
 {
-  "home": "Strona Główna",
+  "home": "Home",
+  "services": "Oferta",
   "aboutme": "O mnie",
   "experience": "Doświadczenie",
-  "contact": "Kontakt",
-  "services": "Oferta"
+  "contact": "Kontakt"
 }

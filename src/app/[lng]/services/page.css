@@ -1,0 +1,3 @@
+#section-services ul li:nth-of-type(2) {
+  @apply lg:row-span-2;
+}

@@ -92,7 +92,7 @@ const Header = ({ lng }) => {
   return (
     <>
       <AscendingSquares />
-      <div className="h-[99px] hidden lg:block"></div>
+      <div className="h-[99px] hidden md:block"></div>
       {/* Placeholder div to match fixed header height */}
       <header
         className={`!font-exo mx-auto w-full py-7 px-4 header-desktop hidden md:block fixed top-0 z-40 ${
@@ -110,6 +110,9 @@ const Header = ({ lng }) => {
             <ul id="menuDesktop" className="flex text-xl font-bold">
               <li className="px-2">
                 <Link href={`/${lng}`}> {t("home")} </Link>
+              </li>
+              <li className="px-2">
+                <Link href={`/${lng}/services`}> {t("services")} </Link>
               </li>
               <li onClick={() => handleNavigation("section-aboutMe")} className="px-2">
                 <a> {t("aboutme")} </a>
@@ -140,11 +143,17 @@ const Header = ({ lng }) => {
           <Link href={`/${lng}`}>
             <Logo />
           </Link>
-          <div id="hamburger" className={burgerClass} onClick={updateMenu}>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+
+          <div className="flex items-center gap-8">
+            <div className="text-lg">
+              <Footer lng={lng} />
+            </div>
+            <div id="hamburger" className={burgerClass} onClick={updateMenu}>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
         </nav>
       </header>
@@ -158,13 +167,16 @@ const Header = ({ lng }) => {
             <Link href={`/${lng}`} onClick={updateMenu}>
               <li> {t("home")} </li>
             </Link>
+            <Link href={`/${lng}/services`} onClick={updateMenu}>
+              <li> {t("services")} </li>
+            </Link>
             <a onClick={() => handleMobileNavigation("section-aboutMe")}>
               <li> {t("aboutme")} </li>
             </a>
             <a onClick={() => handleMobileNavigation("section-experience")}>
               <li> {t("experience")} </li>
             </a>
-            <Link href="/contact" onClick={updateMenu}>
+            <Link href={`/${lng}/contact`} onClick={updateMenu}>
               <li> {t("contact")} </li>
             </Link>
           </ul>

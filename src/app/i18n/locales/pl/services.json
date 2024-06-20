@@ -1,0 +1,32 @@
+{
+  "header": "Poznaj naszą ofertę",
+  "description": "Tworzę oprogramowanie precyzyjnie dopasowane do potrzeb klientów. Każdy projekt rozpoczynam od analizy potrzeb i priorytetów. Podziel się swoim pomysłem, a doradzę Ci w wyborze technologii i rozwiązań, które najlepiej sprawdzą się w Twoim projekcie.",
+  "btn": "Kontakt mailowy",
+  "services": [
+    {
+      "icon": "PageIcon",
+      "header": "Strony internetowe",
+      "text": "W dzisiejszym cyfrowym świecie posiadanie profesjonalnej i funkcjonalnej strony internetowej jest kluczowym elementem sukcesu każdej firmy. Nasza usługa tworzenia stron internetowych oferuje kompleksowe podejście, które łączy najnowsze technologie, kreatywność i zrozumienie potrzeb Twojego biznesu."
+    },
+    {
+      "icon": "CMSIcon",
+      "header": "Dedykowane systemy CMS",
+      "text": "Tworzę dedykowane systemy CMS, które są w pełni dopasowane do specyfiki Twojego biznesu. Integracja z innymi narzędziami i platformami, takimi jak systemy CRM, e-commerce, media społecznościowe i wiele innych. "
+    },
+    {
+      "icon": "ShopIcon",
+      "header": "Sklepy internetowe",
+      "text": "Projektuję estetyczne, funkcjonalne i responsywne sklepy, które przyciągają klientów i zwiększają sprzedaż. Kluczowe jest to, aby zarządzanie Twoim sklepem było proste i intuicyjne. Zapewniam rozwiązania pozwalające na łatwe dodawanie produktów, zarządzanie zamówieniami i analizowanie wyników sprzedaży."
+    },
+    {
+      "icon": "RepairIcon",
+      "header": "Optymalizacja strony internetowej",
+      "text": "Posiadasz stronę internetową, która wymaga obsługi? Chcesz coś dodać/przebudować? Zapewniam kompleksowe wsparcie, które pozwala Twojej witrynie zawsze być na najwyższym poziomie. Aktualizuję oprogramowanie, wtyczki i systemy zarządzania treścią (CMS)."
+    },
+    {
+      "icon": "CollaborationIcon",
+      "header": "Współpraca długoterminowa",
+      "text": "Potrzebujesz Software Developera do dłuższej współpracy? Prowadzisz rekrutację dla firm? Odezwij się mailowo lub telefonicznie z ofertą współpracy."
+    }
+  ]
+}

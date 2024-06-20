@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[828],{7828:function(e){e.exports=JSON.parse('{"home":"Home","services":"Oferta","aboutme":"O mnie","experience":"Doświadczenie","contact":"Kontakt"}')}}]);
