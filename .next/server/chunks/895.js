@@ -1,1 +1,0 @@
-"use strict";exports.id=895,exports.ids=[895],exports.modules={888:e=>{e.exports=JSON.parse('{"howdy":"Cześć, nazywam się","title":"Tworzę aplikacje webowe.","description":"Od trzech lat z pasją zajmuję się tworzeniem oprogramowania. Projektuję i koduję pięknie proste rzeczy, i kocham to, co robię. Obecnie skupiam się na doskonaleniu moich umiejętności w React."}')}};
