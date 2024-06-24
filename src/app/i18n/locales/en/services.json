@@ -28,5 +28,27 @@
       "header": "Long-term collaboration",
       "text": "Looking for a Software Developer for long-term collaboration? Are you recruiting for companies? Contact me via email or phone to discuss collaboration opportunities."
     }
+  ],
+  "faq": [
+    {
+      "header": "How long does it take to create a website?",
+      "text": "The time it takes to create a website depends on the complexity of the project. For small projects, it takes about 7 business days."
+    },
+    {
+      "header": "Will I be able to edit the content on the website myself?",
+      "text": "Yes, I provide a dedicated admin panel where you can easily manage your content, edit it, and add new modules."
+    },
+    {
+      "header": "Will the website display well on a phone?",
+      "text": "Yes, every website I create is fully responsive, designed with a mobile-first approach to ensure an exceptional experience on any device."
+    },
+    {
+      "header": "What is a domain?",
+      "text": "A domain is a fundamental component of online identity. It is part of the web address that directs users to the desired website. Domains are often associated with the names of companies or products. An example of a domain could be jankowalski.pl."
+    },
+    {
+      "header": "What is hosting?",
+      "text": "Hosting is essential for any website or online store. A hosting provider offers server resources so that the website can be displayed on the internet. Hosting is where the website's files are located. The cost of hosting usually includes the ability to create email accounts."
+    }
   ]
 }

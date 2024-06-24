@@ -28,5 +28,27 @@
       "header": "Współpraca długoterminowa",
       "text": "Potrzebujesz Software Developera do dłuższej współpracy? Prowadzisz rekrutację dla firm? Odezwij się mailowo lub telefonicznie z ofertą współpracy."
     }
+  ],
+  "faq": [
+    {
+      "header": "Ile zajmuje proces stworzenia strony internetowej ?",
+      "text": "Czas realizacji strony internetowej zależny jest od stopnia złożoności projektu. W przypadku niewielkich projektów jest to około 7 dni roboczych."
+    },
+    {
+      "header": "Czy będę mógł samodzielnie edytować treści na stronie?",
+      "text": "Tak, przygotowuję dedykowany panel admina w którym możesz zarządzać w prosty sposób swoimi treściami, edytować, dodawać nowe moduły."
+    },
+    {
+      "header": "Czy strona będzie dobrze wyświetlać się na telefonie?",
+      "text": "Tak, każda stworzona przeze mnie strona jest w pełni responsywna, projektowana z podejściem mobile first zapewni wyjątkowe doświadczenia na każdym urządzeniu."
+    },
+    {
+      "header": "Co to jest domena?",
+      "text": "Domena to podstawowy składnik internetowej tożsamości. Domena jest elementem adresu internetowego, który kieruje internautów na żądaną stronę. Domeny są kojarzone najczęściej z nazwami własnymi firm lub produktów. Przykładem domeny może być np. jankowalski.pl"
+    },
+    {
+      "header": "Co to jest hosting?",
+      "text": "Hosting jest niezbędny dla każdej strony lub sklepu internetowego. Dostawca usług hostingowych udostępnia zasoby serwera, by strona mogła wyświetlać się w sieci internetowej. Hosting to miejsce, gdzie znajdują się pliki strony internetowej. W cenie hostingu mamy możliwość tworzenia skrzynek pocztowych."
+    }
   ]
 }

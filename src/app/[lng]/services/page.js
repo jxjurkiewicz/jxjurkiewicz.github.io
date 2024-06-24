@@ -3,6 +3,7 @@
 import "./page.css";
 import { useTranslation } from "@/app/i18n/client";
 import {
+  ArrowDown,
   CMSIcon,
   CollaborationIcon,
   PageIcon,
@@ -14,6 +15,7 @@ import Link from "next/link";
 const ServicesPage = ({ params: { lng } }) => {
   const { t } = useTranslation(lng, "services");
   const services = t("services", { returnObjects: true });
+  const faq = t("faq", { returnObjects: true });
 
   const iconMap = {
     PageIcon: <PageIcon />,
@@ -53,24 +55,45 @@ const ServicesPage = ({ params: { lng } }) => {
         ))}
       </ul>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center mb-32">
         <Link href="mailto:jakubxjurkiewicz@gmail.com">
           <button className="button-hover button font-audiowide">{t("btn")}</button>
         </Link>
       </div>
 
-      {/* 
-      -strony internetowe
-      -sklepy internetowe
-      -optymalizacja strony internetowej
-      -dedykowane systemy cms
-      -współpraca długoterminowa (szukasz programisty do zespołu?)
-      */}
+      <h2 className="font-exo font-extrabold text-3xl md:text-4xl lg:text-5xl text-center mb-14">
+        FAQ
+      </h2>
 
-      <div
-        className="md:text-lg text-center lg:w-3/4 mx-auto mb-10"
-        data-aos="fade-in"
-      ></div>
+      <ul className="faq-container">
+        {faq.map((item, index) => (
+          <li key={index}>
+            <input
+              type="checkbox"
+              name={`detail-${index}`}
+              id={`detail-${index}`}
+              className="hidden"
+            />
+            <details
+              className="border md:border-2 border-green-100 mb-5 rounded-md max-h-20 s:max-h-16 overflow-hidden"
+              open
+            >
+              <summary className="px-4 md:text-xl font-bold block">
+                <label
+                  className="h-20 s:h-16 flex items-center justify-between cursor-pointer"
+                  htmlFor={`detail-${index}`}
+                >
+                  <div>{item.header}</div>
+                  <div className="icon">
+                    <ArrowDown />
+                  </div>
+                </label>
+              </summary>
+              <div className="px-4 pb-4 text-sm md:text-lg">{item.text}</div>
+            </details>
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

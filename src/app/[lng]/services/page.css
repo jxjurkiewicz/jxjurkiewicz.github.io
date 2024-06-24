@@ -1,3 +1,20 @@
 #section-services ul li:nth-of-type(2) {
   @apply lg:row-span-2;
 }
+
+.faq-container details {
+  transition: max-height 400ms ease-in-out;
+}
+
+.faq-container label .icon {
+  transition: rotate 200ms 400ms ease-in-out;
+}
+
+.faq-container input:checked + details {
+  max-height: 800px;
+}
+
+.faq-container input:checked + details label .icon {
+  rotate: 180deg;
+  transition: rotate 200ms ease-in-out;
+}
