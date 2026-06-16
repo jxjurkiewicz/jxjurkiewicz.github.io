@@ -35,7 +35,7 @@ const ContactPage = ({ params: { lng } }) => {
         <p>{t("description2")}</p>
       </div>
       <div className="flex justify-center">
-        <Link href="mailto:jakubxjurkiewicz@gmail.com">
+        <Link href="mailto:biuro@jakubjurkiewicz.pl">
           <button className="button-hover button font-audiowide">{t("btn")}</button>
         </Link>
       </div>

@@ -14,7 +14,7 @@ const ProjectsPage = ({ params: { lng } }) => {
     <>
       <ul
         data-aos="fade-in"
-        className="hidden md:flex flex-wrap -mx-3 mb-20 md:justify-start justify-center mt-20"
+        className="hidden md:flex flex-wrap -mx-3 mb-20 md:justify-start justify-center mt-20 max-w-screen-xl mx-auto"
       >
         {projects.map((project, index) => (
           <li

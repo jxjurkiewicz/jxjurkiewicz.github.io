@@ -50,5 +50,27 @@
       "header": "Co to jest hosting?",
       "text": "Hosting jest niezbędny dla każdej strony lub sklepu internetowego. Dostawca usług hostingowych udostępnia zasoby serwera, by strona mogła wyświetlać się w sieci internetowej. Hosting to miejsce, gdzie znajdują się pliki strony internetowej. W cenie hostingu mamy możliwość tworzenia skrzynek pocztowych."
     }
+  ],
+  "included": [
+    {
+      "icon": "WebsiteHostingIcon",
+      "header": "Domena & Hosting",
+      "text": "Lorem ipsum da levado que ra pinta. Sueve dosot teramus que porta"
+    },
+    {
+      "icon": "SEOIcon",
+      "header": "SEO",
+      "text": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni id repellendus optio dolorum nobis officia?"
+    },
+    {
+      "icon": "MailIcon",
+      "header": "Poczta",
+      "text": "Lorem ipsum da levado que ra pinta. Sueve dosot teramus que porta"
+    },
+    {
+      "icon": "SSLIcon",
+      "header": "Certyfikat SSL",
+      "text": "Lorem ipsum da levado que ra pinta. Sueve dosot teramus que porta"
+    }
   ]
 }

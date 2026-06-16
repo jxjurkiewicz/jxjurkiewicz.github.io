@@ -63,7 +63,7 @@ export const techSkills = [
 export const socials = [
   {
     title: "Contact",
-    link: "mailto:jakubxjurkiewicz@gmail.com",
+    link: "mailto:biuro@jakubjurkiewicz.pl",
     Icon: Icons.ContactIconSmall,
     IconBig: ContactIconBig,
   },

@@ -96,7 +96,7 @@ const Header = ({ lng }) => {
       {/* Placeholder div to match fixed header height */}
       <header
         className={`!font-exo mx-auto w-full py-7 px-4 header-desktop hidden md:block fixed top-0 z-40 ${
-          isScrolled ? "bg-backgroundBright border-b border-green-100" : ""
+          isScrolled ? "bg-backgroundBright border-b-2 border-green-100" : ""
         }`}
       >
         <nav className="max-w-7xl mx-auto flex items-center justify-between">

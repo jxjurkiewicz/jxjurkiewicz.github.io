@@ -2,19 +2,52 @@
   @apply lg:row-span-2;
 }
 
-.faq-container details {
-  transition: max-height 400ms ease-in-out;
+.text-container {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    padding-bottom 0.3s ease-in-out;
+  max-height: 0px;
+  opacity: 0;
+  padding-bottom: 0px;
 }
 
-.faq-container label .icon {
-  transition: rotate 200ms 400ms ease-in-out;
+.text-container.expanded {
+  max-height: 1000px;
+  opacity: 1;
+  padding-bottom: 20px;
 }
 
-.faq-container input:checked + details {
-  max-height: 800px;
-}
-
-.faq-container input:checked + details label .icon {
+.faq-element.expanded .icon {
   rotate: 180deg;
   transition: rotate 200ms ease-in-out;
+}
+
+.included-container li {
+  background-opacity: 0.8;
+  @apply relative py-8 text-black text-xl;
+}
+
+.included-container li:nth-of-type(even) {
+  @apply ml-auto;
+}
+
+.included-container li:before {
+  content: "";
+  z-index: -1;
+  @apply absolute h-full w-[3000px] top-0 left-1/2 -translate-x-1/2 border-b-green-100 border-b-2;
+}
+
+.included-container li:before:nth-of-type(odd) {
+  @apply bg-dark opacity-80;
+}
+
+.included-container li:before:nth-of-type(even) {
+  @apply bg-light;
+}
+
+.included-container li:nth-of-type(even) .included-icon {
+  @apply order-2;
+}
+
+.included-container li:nth-of-type(even) * {
+  @apply text-right;
 }

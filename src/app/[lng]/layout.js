@@ -26,7 +26,7 @@ export default function RootLayout({ children, params: { lng } }) {
 
         <main
           fallback={<Loading />}
-          className="max-w-7xl te mx-auto px-5 pt-[88px] md:pt-0 overflow-hidden"
+          className="mx-auto px-5 pt-[88px] md:pt-0 overflow-hidden"
         >
           {children}
         </main>

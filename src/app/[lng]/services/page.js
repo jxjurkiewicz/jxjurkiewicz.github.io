@@ -6,16 +6,22 @@ import {
   ArrowDown,
   CMSIcon,
   CollaborationIcon,
+  MailIcon,
   PageIcon,
   RepairIcon,
+  SEOIcon,
+  SSLIcon,
   ShopIcon,
+  WebsiteHostingIcon,
 } from "@/components/Icons";
 import Link from "next/link";
+import { useState } from "react";
 
 const ServicesPage = ({ params: { lng } }) => {
   const { t } = useTranslation(lng, "services");
   const services = t("services", { returnObjects: true });
   const faq = t("faq", { returnObjects: true });
+  const included = t("included", { returnObjects: true });
 
   const iconMap = {
     PageIcon: <PageIcon />,
@@ -23,6 +29,16 @@ const ServicesPage = ({ params: { lng } }) => {
     ShopIcon: <ShopIcon />,
     RepairIcon: <RepairIcon />,
     CollaborationIcon: <CollaborationIcon />,
+    WebsiteHostingIcon: <WebsiteHostingIcon />,
+    SEOIcon: <SEOIcon />,
+    MailIcon: <MailIcon />,
+    SSLIcon: <SSLIcon />,
+  };
+
+  const [expandedIndex, setExpandedIndex] = useState(null);
+
+  const toggleExpand = (index) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
   };
 
   return (
@@ -36,10 +52,9 @@ const ServicesPage = ({ params: { lng } }) => {
       >
         {t("description")}
       </p>
-
       <ul
         data-aos="fade-in"
-        className="md:grid gap-x-12 gap-y-12 md:grid-cols-2 lg:grid-cols-3 mb-20 lg:mb-24"
+        className="md:grid gap-x-12 gap-y-12 md:grid-cols-2 lg:grid-cols-3 mb-24 lg:mb-32"
       >
         {services.map((item, index) => (
           <li
@@ -55,42 +70,56 @@ const ServicesPage = ({ params: { lng } }) => {
         ))}
       </ul>
 
+      {/* <h2 className="font-exo font-extrabold text-3xl md:text-4xl lg:text-6xl text-center mb-20">
+        Co zyskujesz zamawiając u nas stronę internetową?
+      </h2>
+      <ul className="included-container mb-32 max-w-screen-lg mx-auto">
+        {included.map((item, index) => (
+          <li className="flex justify-center gap-16 items-center w-max" key={index}>
+            <div className="included-icon flex justify-center">{iconMap[item.icon]}</div>
+            <div>
+              <div className="text-3xl font-bold font-exo tracking-wider mb-2 text-backgroundBright">
+                {item.header}
+              </div>
+              <div className="max-w-lg leading-tight">{item.text}</div>
+            </div>
+          </li>
+        ))}
+      </ul> */}
+
       <div className="flex justify-center mb-32">
-        <Link href="mailto:jakubxjurkiewicz@gmail.com">
+        <Link href="mailto:biuro@jakubjurkiewicz.pl">
           <button className="button-hover button font-audiowide">{t("btn")}</button>
         </Link>
       </div>
-
       <h2 className="font-exo font-extrabold text-3xl md:text-4xl lg:text-5xl text-center mb-14">
         FAQ
       </h2>
-
-      <ul className="faq-container">
+      <ul>
         {faq.map((item, index) => (
-          <li key={index}>
-            <input
-              type="checkbox"
-              name={`detail-${index}`}
-              id={`detail-${index}`}
-              className="hidden"
-            />
-            <details
-              className="border md:border-2 border-green-100 mb-5 rounded-md max-h-20 s:max-h-16 overflow-hidden"
-              open
+          <li
+            onClick={() => {
+              toggleExpand(index);
+            }}
+            className={`border md:border-2 border-green-100 mb-5 rounded-md faq-element ${
+              expandedIndex === index ? "expanded" : ""
+            }`}
+            key={index}
+          >
+            <div className="flex justify-between items-center px-4 py-3 cursor-pointer">
+              <div className="md:text-xl font-bold">{item.header}</div>
+              <div className="icon">
+                <ArrowDown />
+              </div>
+            </div>
+            <div
+              onClick={(e) => e.stopPropagation()}
+              className={`text-container px-4 text-sm md:text-lg ${
+                expandedIndex === index ? "expanded" : ""
+              }`}
             >
-              <summary className="px-4 md:text-xl font-bold block">
-                <label
-                  className="h-20 s:h-16 flex items-center justify-between cursor-pointer"
-                  htmlFor={`detail-${index}`}
-                >
-                  <div>{item.header}</div>
-                  <div className="icon">
-                    <ArrowDown />
-                  </div>
-                </label>
-              </summary>
-              <div className="px-4 pb-4 text-sm md:text-lg">{item.text}</div>
-            </details>
+              {item.text}
+            </div>
           </li>
         ))}
       </ul>
