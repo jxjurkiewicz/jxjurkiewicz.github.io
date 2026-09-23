@@ -95,11 +95,11 @@ const Header = ({ lng }) => {
       <div className="h-[99px] hidden md:block"></div>
       {/* Placeholder div to match fixed header height */}
       <header
-        className={`!font-exo mx-auto w-full py-7 px-4 header-desktop hidden md:block fixed top-0 z-40 ${
-          isScrolled ? "bg-backgroundBright border-b-2 border-green-100" : ""
+        className={`!font-exo mx-auto w-full py-7 px-4 header-desktop hidden md:block fixed top-0 z-40 border-b  ${
+          isScrolled ? "bg-backgroundBright border-b border-green-100" : "border-transparent"
         }`}
       >
-        <nav className="max-w-7xl mx-auto flex items-center justify-between">
+        <nav className="max-w-screen-2xl mx-auto flex items-center justify-between">
           <Link href={`/${lng}`}>
             <div className="w-12 h-auto logo-container">
               <Logo />
@@ -107,20 +107,20 @@ const Header = ({ lng }) => {
           </Link>
 
           <div className="flex items-center">
-            <ul id="menuDesktop" className="flex text-xl font-bold">
-              <li className="px-2">
+            <ul id="menuDesktop" className="flex text-[19px] font-semibold">
+              <li className="px-3">
                 <Link href={`/${lng}`}> {t("home")} </Link>
               </li>
-              <li className="px-2">
+              <li className="px-3">
                 <Link href={`/${lng}/services`}> {t("services")} </Link>
               </li>
-              <li onClick={() => handleNavigation("section-aboutMe")} className="px-2">
+              <li onClick={() => handleNavigation("section-aboutMe")} className="px-3">
                 <a> {t("aboutme")} </a>
               </li>
-              <li onClick={() => handleNavigation("section-experience")} className="px-2">
+              <li onClick={() => handleNavigation("section-experience")} className="px-3">
                 <a> {t("experience")} </a>
               </li>
-              <li className="px-2">
+              <li className="px-3">
                 <Link href={`/${lng}/contact`}> {t("contact")} </Link>
               </li>
             </ul>

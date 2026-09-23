@@ -1,5 +1,41 @@
 {
-  "howdy": "Howdy, my name is",
-  "title": "I build things for the web.",
-  "description": "I’m a passionate software developer for 3 years. I design and code beautifully simple things, and I love what I do. Currently, I’m focused on mastering my React skills."
+  "howdy": "Modern digital services for businesses",
+  "title": "I build websites and deliver IT solutions ",
+  "title_highlight": "for business.",
+  "description": "I help businesses establish an online presence, streamline digital processes and implement practical solutions — from websites and online stores to electronic signatures, technical support and IT care.",
+  "consultation": "Free consultation",
+  "offer": "View services",
+  "imageAlt": "Visualisation of digital services for businesses",
+  "cards": {
+    "websites": {
+      "header": "Websites",
+      "description": "Modern, fast and responsive websites that attract customers and build trust."
+    },
+    "onlineStores": {
+      "header": "Online stores",
+      "description": "Complete online stores with integrations, payments and management panels."
+    },
+    "electronicSignatures": {
+      "header": "Electronic signatures",
+      "description": "Implementation and integration of electronic document signing solutions for your company."
+    },
+    "itSupport": {
+      "header": "IT support",
+      "description": "Ongoing technical care, updates, security and support in developing your IT infrastructure."
+    }
+  },
+  "cardsExtra": {
+    "1": {
+      "header": "Personalised approach",
+      "description": "Solutions tailored to your needs."
+    },
+    "2": {
+      "header": "Modern technologies",
+      "description": "Proven tools and best practices."
+    },
+    "3": {
+      "header": "Post-implementation support",
+      "description": "You are not left on your own — I provide ongoing support."
+    }
+  }
 }

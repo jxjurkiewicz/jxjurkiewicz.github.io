@@ -8,7 +8,12 @@
     --color-green-100: #64ffda;
 
     --color-light: #ccd6f6;
+    --color-semidark: #98a6c7;
     --color-dark: #8892b0;
+
+    --color-blue-100: 149 174 234; /* #95aeea */
+    --color-blue-200: 40 223 245; /*#28dff5 */
+
 
     --foreground-rgb: 204, 214, 246;
     --background-start-rgb: 3, 5, 33;
@@ -48,7 +53,7 @@ header a {
 }
 
 main > section {
-  @apply mx-auto max-w-7xl;
+  @apply mx-auto;
 }
 
 .section-header {
@@ -87,6 +92,15 @@ main > section {
   );
   color: var(--color-green-100);
   @apply hover:text-white;
+}
+
+.glassy-screen-card {
+  background: linear-gradient(
+    107deg,
+    hsl(var(--color-suppBlue-100) / 0.05) 0%,
+    hsl(var(--color-suppBlue-100) / 0.3) 40%,
+    hsl(var(--color-suppBlue-100) / 0.05) 100%
+  );
 }
 
 /* Styles for writing header in SplashSection */

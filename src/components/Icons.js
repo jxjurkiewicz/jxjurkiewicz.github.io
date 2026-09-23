@@ -699,3 +699,40 @@ export const SSLIcon = () => (
     />
   </svg>
 );
+
+export const WorldIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-world">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+	<path d="M3.6 9h16.8" />
+	<path d="M3.6 15h16.8" />
+	<path d="M11.5 3a17 17 0 0 0 0 18" />
+	<path d="M12.5 3a17 17 0 0 1 0 18" />
+</svg>
+);
+
+export const CartIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+	<path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+	<path d="M17 17h-11v-14h-2" />
+	<path d="M6 5l14 1l-1 7h-13" />
+</svg>
+);
+
+export const PenIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-pencil-check">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+	<path d="M13.5 6.5l4 4" />
+	<path d="M15 19l2 2l4 -4" />
+</svg>
+);
+
+export const CloudIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="icon icon-tabler icons-tabler-outline icon-tabler-cloud">
+	<path stroke="none" d="M0 0h24v24H0z" fill="none" />
+	<path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.773c1.88 -.572 3.956 -.193 5.444 1c1.488 1.19 2.162 3.007 1.77 4.769h.99c1.913 0 3.464 1.56 3.464 3.486c0 1.927 -1.551 3.487 -3.465 3.487h-11.878" />
+</svg>
+);

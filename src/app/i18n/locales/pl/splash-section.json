@@ -1,5 +1,41 @@
 {
-  "howdy": "Cześć, nazywam się",
-  "title": "Tworzę aplikacje webowe.",
-  "description": "Od trzech lat z pasją zajmuję się tworzeniem oprogramowania. Projektuję i koduję pięknie proste rzeczy, i kocham to, co robię. Obecnie skupiam się na doskonaleniu moich umiejętności w React."
+  "howdy": "Nowoczesna obsługa cyfrowa dla firm",
+  "title": "Tworzę strony internetowe i wdrażam rozwiązania IT ",
+  "title_highlight": "dla biznesu.",
+  "description": "Pomagam firmom zaistnieć w sieci, uporządkować procesy cyfrowe i wdrożyć praktyczne rozwiązania — od stron WWW i sklepów online po podpisy elektroniczne, wsparcie techniczne i opiekę IT.",
+  "consultation": "Bezpłatna konsultacja",
+  "offer": "Zobacz ofertę",
+  "imageAlt": "Wizualizacja usług cyfrowych dla firm",
+  "cards": {
+    "websites": {
+      "header": "Strony WWW",
+      "description": "Nowoczesne, szybkie i responsywne strony internetowe, które przyciągają klientów i budują zaufanie."
+    },
+    "onlineStores": {
+      "header": "Sklepy internetowe",
+      "description": "Kompleksowe sklepy online z integracjami, płatnościami i panelami zarządzania."
+    },
+    "electronicSignatures": {
+      "header": "Podpisy elektroniczne",
+      "description": "Wdrożenie i integracja rozwiązań do elektronicznego podpisywania dokumentów w Twojej firmie."
+    },
+    "itSupport": {
+      "header": "Wsparcie IT",
+      "description": "Stała opieka techniczna, aktualizacje, bezpieczeństwo i pomoc w rozwoju infrastruktury IT."
+    }
+  },
+  "cardsExtra": {
+    "1": {
+      "header": "Indywidualne podejście",
+      "description": "Rozwiązania dopasowane do Twoich potrzeb."
+    },
+    "2": {
+      "header": "Nowoczesne technologie",
+      "description": "Sprawdzone narzędzia i najlepsze praktyki."
+    },
+    "3": {
+      "header": "Wsparcie po wdrożeniu",
+      "description": "Nie zostajesz sam - zapewniam stałą pomoc."
+    }
+  }
 }

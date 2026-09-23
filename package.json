@@ -10,6 +10,7 @@
     "server": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "@tabler/icons-react": "^3.48.0",
     "accept-language": "^3.0.18",
     "aos": "^2.3.4",
     "file-loader": "^6.2.0",

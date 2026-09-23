@@ -4,6 +4,7 @@ import {
   LinkedinIconBig,
   GitHubSocialsIconBig,
 } from "../components/Icons";
+import { IconUsers, IconSettings, IconShieldCheck } from '@tabler/icons-react';
 
 export const techSkills = [
   {
@@ -59,6 +60,40 @@ export const techSkills = [
     Icon: Icons.GitHubIcon,
   },
 ];
+
+export const cards = [
+  {
+    key: "websites",
+    Icon: Icons.WorldIcon,
+  },
+  {
+    key: "onlineStores",
+    Icon: Icons.CartIcon,
+  },
+  {
+    key: "electronicSignatures",
+    Icon: Icons.PenIcon,
+  },
+  {
+    key: "itSupport",
+    Icon: Icons.CloudIcon,
+  },
+];
+
+export const cardsExtra = [
+  {
+    key: "1",
+    Icon: IconUsers,
+  },
+    {
+    key: "2",
+    Icon: IconSettings,
+  },
+    {
+    key: "3",
+    Icon: IconShieldCheck,
+  },
+]
 
 export const socials = [
   {
